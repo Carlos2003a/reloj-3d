@@ -1,0 +1,58 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    perspective: 1000px;
+  }
+  /* estilos para el cubo del reloj 3D */
+  .cubo {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  /* estilos para cada cara del cubo */
+  .cubo div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+  }
+  
+  .lado1 {
+    transform: translateZ(100px);
+  }
+  
+  .lado2 {
+    transform: rotateY(180deg) translateZ(100px);
+  }
+  
+  .lado3 {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  
+  .lado4 {
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+  
+  .lado5 {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+  
+  .lado6 {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  /* estilos para los números en el reloj */
+  .numero {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    line-height: 200px;
+  }
